@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  ai:
+    build:
+      context: .
+      dockerfile: .docker/ollama/Dockerfile
+    volumes:
+      - ./.docker/ollama/root:/root/.ollama
+  front:
+    build:
+      context: .
+      dockerfile: .docker/vue/Dockerfile
+    ports:
+      - "80:80"
