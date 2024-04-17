@@ -1,20 +1,24 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+<script>
+import AiInput from "@/components/sft.vue";
+import AiDescribeFilter from "@/components/tft.vue";
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <div class="container is-fluid is-3 mt-5">
+    <div class="columns">
+      <div class="column">
+        <div class="box m-5 pt-3">
+          <AiInput/>
+        </div>
+        <div class="column">
+          <div class="box m-5 pt-3">
+            <AiDescribeFilter/>
+          </div>
+        </div>
 
-    <div class="wrapper">
-      <HelloWorld msg="Check list!" />
+      </div>
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  </div>
 </template>
 
 <style scoped>
